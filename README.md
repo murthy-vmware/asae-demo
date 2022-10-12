@@ -102,15 +102,17 @@ az configure --defaults \
 ```
 
 ## Create App
-
+```shell
 az spring app create -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVICE} 
+```
 
 ## Deploy App
-
+```shell
 az spring app deploy -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVICE} --source-path ./hello-world
-
+```
 ## Test App
 
 ## Delete App
-
+```shell
 az spring app delete -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVICE}
+```
