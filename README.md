@@ -103,12 +103,12 @@ az configure --defaults \
 
 ## Create App
 ```shell
-az spring app create -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVICE} 
+az spring app create -n ${APP_NAME}
 ```
 
 ## Deploy App
 ```shell
-az spring app deploy -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVICE} --source-path ./hello-world
+az spring app deploy -n ${APP_NAME} --source-path ./hello-world
 ```
 ## Test App
 
