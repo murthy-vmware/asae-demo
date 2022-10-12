@@ -105,7 +105,7 @@ az configure --defaults \
 ```shell
 az spring app create -n ${APP_NAME}
 ```
-### Build hello-world app locally
+## Test hello-world app locally
 Perform the below steps to build the app locally
 
 ```bash
@@ -113,8 +113,6 @@ cd hello-world
 ./mvnw spring-boot:run &
 cd ..
 ```
-
-### Test the hello-world app locally
 
 ```bash
 curl http://127.0.0.1:8080/hello
@@ -129,7 +127,7 @@ kill %1
 
 ## Deploy App
 ```shell
-az spring app deploy -n ${APP_NAME} --artifact-path ./hello-world/target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n ${APP_NAME} --artifact-path ./jars/demo-0.0.1-SNAPSHOT.jar
 ```
 ## Test App
 
