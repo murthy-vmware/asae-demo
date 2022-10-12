@@ -131,6 +131,8 @@ az spring app deploy -n ${APP_NAME} --artifact-path ./jars/demo-0.0.1-SNAPSHOT.j
 ```
 ## Test App
 
+Please add /hello at the end of test endpoint to see the greeting message
+
 ## Delete App
 ```shell
 az spring app delete -n ${APP_NAME}
