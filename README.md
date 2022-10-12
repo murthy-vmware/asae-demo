@@ -1,3 +1,7 @@
+Instructions needed to run a simple asa-e hello world application. 
+
+These instructions are a subset of the instructions at https://github.com/Azure-Samples/acme-fitness-store
+
 ## 1. Pre-requisites
 
 In order to deploy a Java app to cloud, you need
