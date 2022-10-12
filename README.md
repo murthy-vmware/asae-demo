@@ -28,13 +28,16 @@ az extension add --name spring
 
 ## 3. Prepare your environment for deployments
 
-Open `./setup-env-variables.sh` and enter the following information:
+```shell
+cp ./setup-env-variables-template.sh ./setup-env-variables.sh
+```
+
+Open `./setup-env-variables.sh` and update the following information:
 
 ```shell
 export SUBSCRIPTION=subscription-id                 # replace it with your subscription-id
 export RESOURCE_GROUP=resource-group-name           # existing resource group or one that will be created in next steps
 export SPRING_APPS_SERVICE=azure-spring-apps-name   # name of the service that will be created in the next steps
-export LOG_ANALYTICS_WORKSPACE=log-analytics-name   # existing workspace or one that will be created in next steps
 export REGION=region-name                           # choose a region with Enterprise tier support
 export APP_NAME=app-name
 ```
@@ -105,3 +108,9 @@ az spring app create -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVIC
 ## Deploy App
 
 az spring app deploy -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVICE} --source-path ./hello-world
+
+## Test App
+
+## Delete App
+
+az spring app delete -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVICE}
