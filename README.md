@@ -123,16 +123,27 @@ curl http://127.0.0.1:8080/hello
 Finally, kill running app:
 
 ```bash
+fg
 kill %1
 ```
 
 ## Deploy App
 ```shell
-az spring app deploy -n ${APP_NAME} --source-path ./hello-world
+az spring app deploy -n ${APP_NAME} --artifact-path ./hello-world/target/demo-0.0.1-SNAPSHOT.jar
 ```
 ## Test App
 
 ## Delete App
 ```shell
-az spring app delete -n ${APP_NAME} -g ${RESOURCE_GROUP} -s ${SPRING_APPS_SERVICE}
+az spring app delete -n ${APP_NAME}
+```
+
+## Delete Spring Apps Instance
+```shell
+az spring delete -n ${SPRING_APPS_SERVICE}
+```
+
+## Delete Resource Group
+```shell
+az group delete --name ${RESOURCE_GROUP}
 ```
