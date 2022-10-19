@@ -120,7 +120,11 @@ curl http://localhost:8080/
 
 Also, you can test the application using a browser, e.g. http://localhost:8080/
 
-Finally, terminate the running app, e.g. `CTRL+C` in the running application terminal window.
+Finally, terminate the running app, e.g. `CTRL+C` in the running application terminal window, and go back to the main directory, e.g. 
+
+```shell
+cd ..
+```
 
 ## Deploy App
 ```shell
