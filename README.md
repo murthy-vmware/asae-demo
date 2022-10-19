@@ -139,6 +139,25 @@ Please go to the TEST endpoint to see the greeting message. Notice that TEST end
 az spring app update -n ${APP_NAME} --assign-endpoint true
 ```
 
+## Observe the Actuator
+Observe the Actuator endpoint for environment variables. Notice interesting environment variables that are automatically added by the Azure Spring Apps (i.e. Kubernetes under the covers), e.g. `/actuator/env/HOSTNAME`
+
+```shell
+curl http://APP_URL_HERE/actuator/env/HOSTNAME
+```
+
+## Scale out
+Let's scale out the application by manually increasing the number of instances, e.g. 
+
+```shell
+az spring app scale -n ${APP_NAME} --instance-count 3
+```
+
+Observe the Actuator endpoint and see how the `HOSTNAME` changes with each request, e.g.
+```shell
+curl http://APP_URL_HERE/actuator/env/HOSTNAME
+```
+
 # Clean up
 Let's clean up the application, Azure Spring Apps instance, and corresponding Resource Group.
 
