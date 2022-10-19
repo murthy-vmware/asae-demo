@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @GetMapping("/hello")
+    @GetMapping("/")
     public String hello() {
-        return "Hello from Azure Spring Apps Enterprise: "+ LocalDateTime.now();
+        return "Hello from Azure Spring Apps Enterprise: " + LocalDateTime.now();
     }
 }

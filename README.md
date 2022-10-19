@@ -110,28 +110,33 @@ Perform the below steps to build the app locally
 
 ```bash
 cd hello-world
-./mvnw spring-boot:run &
-cd ..
+./mvnw spring-boot:run
 ```
 
+Test the application locally, from a different terminal window, e.g.
 ```bash
-curl http://127.0.0.1:8080/hello
+curl http://localhost:8080/
 ```
 
-Finally, kill running app:
+Also, you can test the application using a browser, e.g. http://localhost:8080/
 
-```bash
-fg
-kill %1
-```
+Finally, terminate the running app, e.g. `CTRL+C` in the running application terminal window.
 
 ## Deploy App
 ```shell
 az spring app deploy -n ${APP_NAME} --artifact-path ./jars/demo-0.0.1-SNAPSHOT.jar
 ```
-## Test App
 
-Please add /hello at the end of test endpoint to see the greeting message
+## Test App
+Please go to the TEST endpoint to see the greeting message. Notice that TEST endpoint has automatically added authentication. 
+
+## Add public endpoint
+```shell
+az spring app update -n ${APP_NAME} --asign-endpoint true
+```
+
+# Clean up
+Let's clean up the application, Azure Spring Apps instance, and corresponding Resource Group.
 
 ## Delete App
 ```shell
