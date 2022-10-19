@@ -139,6 +139,15 @@ Please go to the TEST endpoint to see the greeting message. Notice that TEST end
 az spring app update -n ${APP_NAME} --assign-endpoint true
 ```
 
+Observe the new URL assigned to the application, e.g. http://APP_URL_HERE
+
+You can also get the URL programmatically, e.g.
+```shell
+az spring app show -n ${APP_NAME} --query "properties.url"
+"https://production-hello-world.azuremicroservices.io"
+```
+
+
 ## Observe the Actuator
 Observe the Actuator endpoint for environment variables. Notice interesting environment variables that are automatically added by the Azure Spring Apps (i.e. Kubernetes under the covers), e.g. `/actuator/env/HOSTNAME`
 
