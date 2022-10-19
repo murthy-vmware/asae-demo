@@ -136,7 +136,7 @@ Please go to the TEST endpoint to see the greeting message. Notice that TEST end
 
 ## Add public endpoint
 ```shell
-az spring app update -n ${APP_NAME} --asign-endpoint true
+az spring app update -n ${APP_NAME} --assign-endpoint true
 ```
 
 # Clean up
